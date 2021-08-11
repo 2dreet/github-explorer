@@ -1,9 +1,12 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes';
 
-function App() {
-  return (
-    <h1> hellow world 2 </h1>
-  );
-}
+//  BrowserRouter: utilizado para navegar pela url
+const App: React.FC = () => (
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>
+);
 
 export default App;
