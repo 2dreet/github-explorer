@@ -11,7 +11,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     outline: 0;
-    // Pesquisar sobre
+    // TODO: Pesquisar sobre
     box-sizing: border-box;
   }
 

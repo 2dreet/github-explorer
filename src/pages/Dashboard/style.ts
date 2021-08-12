@@ -63,7 +63,7 @@ export const Repositorys = styled.div`
     width: 100%;
     padding: 24px;
 
-    // responsavel por tirar o estilo do link
+    // responsavel por dizer que esse componente é um bloco/container
     display: block;
     // responsavel por tirar o estilo do link
     text-decoration: none;

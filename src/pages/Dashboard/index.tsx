@@ -27,6 +27,7 @@ const Dashboard: React.FC = () => {
             <p> nome do repositório</p>
           </div>
 
+          {/* icone de seta */}
           <FiChevronRight size={20} />
         </a>
         <a href="teste">
