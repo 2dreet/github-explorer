@@ -90,7 +90,9 @@ export const Repositorys = styled.div`
     }
 
     div {
-      margin-left: 16px;
+      // se ajusta com o espaço que ela tem disponivel
+      flex: 1;
+      margin: 0px 16px;
 
       strong {
         font-size: 20px;
