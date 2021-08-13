@@ -32,6 +32,13 @@
     "import/prefer-dafault-export": "off",
     "no-use-before-define" : "off",
     "import/prefer-default-export": "off",
+    "camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+        "error",
+        {
+          "allowExpressions": true
+        }
+    ],
     "import/extensions":[
       "error",
       "ignorePackages",
