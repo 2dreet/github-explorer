@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { shade } from 'polished';
 
 // `` se chama Template literals
@@ -15,7 +15,12 @@ export const Title = styled.h1`
 // esse elemento tentara ocupar o maximmo do tamanho disponivel
 // colocando os compentes dentro do style como o input e o button
 // todos esses dentro do form vao receber o style
-export const Form = styled.form`
+// Aqui um exemplo de props de Style
+interface FormProps {
+  hasError: boolean;
+}
+// ao passaar depoi da tag <FormProps> passa os atributos para ser usado no style
+export const Form = styled.form<FormProps>`
   margin-top: 40px;
   max-width: 700px;
 
@@ -28,6 +33,16 @@ export const Form = styled.form`
     border: 0;
     border-radius: 5px 0 0 5px;
     color: #3a3a3a;
+    border: 2px solid #fff;
+    border-right: 0;
+
+    // aqui obtem os atributos passados e usando o componente css é possivel
+    // mudar o css da classe usando as props passadas
+    ${(props) =>
+      props.hasError &&
+      css`
+        border-color: #c53030;
+      `}
 
     /* ao colocar &:: se refere ao mesmo componente apenas com estado diferente ou propiedade */
     &::placeholder {
@@ -111,4 +126,12 @@ export const Repositorys = styled.div`
       color: #cbcbd6;
     }
   }
+`;
+
+// aqui da o stilo para o span Error que vai ser usado na tela
+// lembrando o diplay block serve para mostrar como um bloco e não linha
+export const Error = styled.span`
+  display: block;
+  color: #c53030;
+  margin-top: 8px;
 `;
